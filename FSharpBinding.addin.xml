@@ -4,19 +4,15 @@
        author      = "William Halchin"
        copyright   = "MIT X11"
        url         = "http://www.monodevelop.com/"
-       description = "FSharp Language Binding"
+       description = "F# Language Binding"
 	   category    = "Language bindings"
-       version     = "2.2">
+       version     = "2.4">
 	
 	<Dependencies>
-		<Addin id="Core" version="2.2"/>
-		<Addin id="Core.Gui" version="2.2"/>
-		<Addin id="Projects" version="2.2"/>
-		<Addin id="Projects.Gui" version="2.2"/>
-		<Addin id="Ide" version="2.2"/>
-		<Addin id="SourceEditor2" version="2.2"/>
-		<Addin id="Refactoring" version="2.2"/>
-		<Addin id="AspNet" version="2.2"/>
+		<Addin id="Core" version="2.4"/>
+		<Addin id="Ide" version="2.4"/>
+		<Addin id="SourceEditor2" version="2.4"/>
+		<Addin id="Refactoring" version="2.4"/>
 	</Dependencies>
 
 
@@ -96,5 +92,7 @@
                             extensions = "*.resources,*.resx"/>
         </Extension>
 
-
+	<Extension path = "/MonoDevelop/SourceEditor2/CustomModes">
+		<SyntaxMode mimeTypes="text/x-fsharp" class="MonoDevelop.FSharp.Highlighting.FSharpSyntaxMode"/>
+	</Extension>
 </Addin>

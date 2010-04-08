@@ -83,7 +83,7 @@ namespace MonoDevelop.FSharp.Project
 					return base.GetDefaultResourceId (pf);
 
 				string culture, extn, only_filename;
-				if (MSBuildProjectService.TrySplitResourceName (pf.RelativePath, out only_filename, out culture, out extn))
+				if (MSBuildProjectService.TrySplitResourceName (pf.FilePath.FullPath, out only_filename, out culture, out extn))
 					extn = "." + culture + ".resources";
 				else
 					extn = ".resources";
